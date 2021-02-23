@@ -68,6 +68,8 @@ result
     └── ...
 ```
 
+* Labels are prepared according to YOLO labelling rules
+
 To check the class distribution
 
 ```buildoutcfg
