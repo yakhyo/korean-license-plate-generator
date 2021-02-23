@@ -1,7 +1,7 @@
 # Korean License Plate Generator
 
 ```buildoutcfg
-git clone ....
+git clone https://github.com/yakhyo/Korean-License-Plate-Generate.git
 ```
 `assets` folder tree:
 ```buildoutcfg
