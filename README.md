@@ -16,9 +16,9 @@ assets
     ├── bae.jpg
     └── ...
 ├── nums
-    ├── a.jpg
-    ├── ba.jpg
-    ├── bae.jpg
+    ├── 0.jpg
+    ├── 1.jpg
+    ├── 2.jpg
     └── ...
 └── plates
     ├── type_a
