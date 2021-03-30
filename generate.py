@@ -17,8 +17,8 @@ class ImageGenerator:
         file_list = os.listdir(file_path)
         self.Number = list()
         self.number_list = list()
-        for file in file_list:
-            img_path = os.path.join(file_path, file)
+        for file_ in file_list:
+            img_path = os.path.join(file_path, file_)
             if transparent:
                 img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
                 trans_mask = img[:, :, 3] == 0
@@ -28,15 +28,15 @@ class ImageGenerator:
                 img = cv2.imread(img_path)
 
             self.Number.append(img)
-            self.number_list.append(file[0:-4])
+            self.number_list.append(file_[0:-4])
 
         # Load Chars
         file_path = chars_path
         file_list = os.listdir(file_path)
         self.char_list = list()
         self.Char1 = list()
-        for file in file_list:
-            img_path = os.path.join(file_path, file)
+        for file_ in file_list:
+            img_path = os.path.join(file_path, file_)
             if transparent:
                 img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
                 trans_mask = img[:, :, 3] == 0
@@ -46,7 +46,7 @@ class ImageGenerator:
                 img = cv2.imread(img_path)
 
             self.Char1.append(img)
-            self.char_list.append(file[0:-4])
+            self.char_list.append(file_[0:-4])
 
     @staticmethod
     def add(background_image, char):
@@ -335,7 +335,7 @@ if __name__ == '__main__':
                              nums_path='./assets/nums/',
                              chars_path='./assets/chars/')
 
-    num_img = 100
+    num_img = 120
 
     Type_A1.Type_A(num_img, save=True)
     print("Type 1 finish")
