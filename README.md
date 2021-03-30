@@ -3,7 +3,8 @@
 Run
 ```buildoutcfg
 git clone https://github.com/yakhyo/Korean-License-Plate-Generate.git
-python generate.py
+python generate.py # to generate passanger car license plate images
+python generate_truck.py # to generate truck license plate images
 ```
 
 `assets` folder:
@@ -15,10 +16,25 @@ assets
     ├── ba.jpg
     ├── bae.jpg
     └── ...
+├── chars_truck
+    ├── a.jpg
+    ├── ba.jpg
+    ├── bae.jpg
+    └── ...
 ├── nums
     ├── 0.jpg
     ├── 1.jpg
     ├── 2.jpg
+    └── ...
+├── region1
+    ├── 001_bu.jpg
+    ├── 002_chung.jpg
+    ├── 003_chung.jpg
+    └── ...
+├── region2
+    ├── 001_san.jpg
+    ├── 002_buk.jpg
+    ├── 003_nam.jpg
     └── ...
 └── plates
     ├── type_a
@@ -31,9 +47,19 @@ assets
         ├── plate_2.jpg
         ├── plate_3.jpg
         └── ...
-    └── names.txt
+    └── type_c
+        ├── plate_1jpg
+        ├── plate_2.jpg
+        ├── plate_3.jpg
+        └── ...
+    └── type_d
+        ├── plate_1jpg
+        ├── plate_2.jpg
+        ├── plate_3.jpg
+        └── ...
+└── names.txt
 ```
-This code generates two types of license plates:
+This code generates two types of passenger car and turck license plate images:
 
 Type A:
 <div align="center">
@@ -46,6 +72,20 @@ Type B
 <div align="center">
 
 ![License plate type 2](sample/image_b_0.jpg)
+
+</div>
+
+Type C
+<div align="center">
+
+![License plate type 3](sample/image_ax_4.jpg)
+
+</div>
+
+Type D
+<div align="center">
+
+![License plate type 4](sample/image_dx_30.jpg)
 
 </div>
 
@@ -68,9 +108,9 @@ result
     └── ...
 ```
 
-* Labels are prepared according to YOLO labelling rules
+* Labels are prepared according to YOLO labelling format
 
-To check the class distribution
+To check the class distribution:
 
 ```buildoutcfg
 python distrib.py
