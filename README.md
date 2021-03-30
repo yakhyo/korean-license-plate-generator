@@ -91,7 +91,12 @@ Type D
 
 `names.txt` consists from numbers and letter combinations:
 
-`0 1 2 3 4 5 6 7 8 9 ga na da ra ma ba sa a cha ha geo neo deo reo meo beo seo eo cheo heo go no do ro mo bo so o cho ho gu nu du ru mu bu su u chu bae`
+```angular2html
+0 1 2 3 4 5 6 7 8 9 ga na da ra ma ba sa a ja ha geo neo 
+deo reo meo beo seo eo jeo heo go no do ro mo bo so o jo 
+ho gu nu du ru mu bu su u ju bae gwang nam je cheon dae
+gang se gi gyeong san jong buk won ul chung in jeon
+```
 
 After running the `generate.py` file, `result` folder will appear:
 ```buildoutcfg
