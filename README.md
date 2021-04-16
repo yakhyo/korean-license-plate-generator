@@ -1,4 +1,4 @@
-# Korean License Plate Generator
+# Korean Number Plate Generator
 
 Run
 ```buildoutcfg
