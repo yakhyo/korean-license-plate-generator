@@ -1,5 +1,5 @@
 # Korean License Plate Generator
-
+## Download and Run. It generates images with YOLO labels
 Run
 ```buildoutcfg
 git clone https://github.com/yakhyo/Korean-License-Plate-Generate.git
