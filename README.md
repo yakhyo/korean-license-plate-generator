@@ -1,4 +1,4 @@
-# Korean License Plate Generator
+## Korean License Plate Generator
 **Download and Run. It generates images with YOLO format labels**
 
 **Run**
