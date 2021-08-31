@@ -118,7 +118,7 @@ result
 
 To check the class distribution:
 
-```buildoutcfg
+```python
 python distrib.py
 ```
 
