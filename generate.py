@@ -208,9 +208,9 @@ class ImageGenerator:
                     col += 45
                     x3, y1 = x3, y1
                     # number 3
+                    patch = Plate[row + 12:row + 82, col + 2:col + 49 + 2, :]
                     Plate[row + 12:row + 82, col + 2:col + 49 + 2, :] = self.add(
-                        Plate[row + 12:row + 82, col + 2:col + 49 + 2, :],
-                        self.random_bright(chars[i % 40]))
+                        patch, self.random_bright(chars[i % 40]))
 
                     x4, y2 = x3 + 49, y2
                     x_center_norm, y_center_norm = (x3 + x4) / (2 * 355), (y1 + y2) / (2 * 155)
@@ -222,7 +222,8 @@ class ImageGenerator:
                     x4, y1 = col, y1
                     # numbers 4
                     rand_int = random.randint(0, 9)
-                    Plate[row:row + 83, col + 2:col + 45 + 2, :] = self.add(Plate[row:row + 83, col:col + 45, :],
+                    patch = Plate[row:row + 83, col:col + 45, :]
+                    Plate[row:row + 83, col + 2:col + 45 + 2, :] = self.add(patch,
                                                                             self.random_bright(numbers[rand_int]))
 
                     x5, y2 = x4 + 45 + 2, y2
@@ -236,8 +237,9 @@ class ImageGenerator:
                     x5, y1 = col, y1
                     # number 5
                     rand_int = random.randint(0, 9)
-                    Plate[row:row + 83, col:col + 45, :] = self.add(Plate[row:row + 83, col:col + 45, :],
-                                                                    self.random_bright(numbers[rand_int]))
+                    patch = Plate[row:row + 83, col:col + 45, :]
+                    Plate[row:row + 83, col:col + 45, :] = self.add(patch, self.random_bright(numbers[rand_int]))
+
                     x6, y2 = x5 + 45, y2
                     x_center_norm, y_center_norm = (x5 + x6) / (2 * 355), (y1 + y2) / (2 * 155)
                     width_norm, height_norm = (45 / 355), (83 / 155)
@@ -247,11 +249,10 @@ class ImageGenerator:
 
                     col += 45
                     x6, y1 = x6, y1
-
                     # number 6
                     rand_int = random.randint(0, 9)
-                    Plate[row:row + 83, col:col + 45, :] = self.add(Plate[row:row + 83, col:col + 45, :],
-                                                                    self.random_bright(numbers[rand_int]))
+                    patch = Plate[row:row + 83, col:col + 45, :]
+                    Plate[row:row + 83, col:col + 45, :] = self.add(patch, self.random_bright(numbers[rand_int]))
 
                     x7, y2 = x6 + 45, y2
                     x_center_norm, y_center_norm = (x6 + x7) / (2 * 355), (y1 + y2) / (2 * 155)
@@ -259,16 +260,18 @@ class ImageGenerator:
 
                     cls_idx = names.index(self.number_list[rand_int])
                     f.write(f'{cls_idx} {x_center_norm} {y_center_norm} {width_norm} {height_norm}\n')
+
                     col += 45
                     x7, y1 = x7, y1
-
                     # number 7
                     rand_int = random.randint(0, 9)
-                    Plate[row:row + 83, col:col + 45, :] = self.add(Plate[row:row + 83, col:col + 45, :],
-                                                                    self.random_bright(numbers[rand_int]))
+                    patch = Plate[row:row + 83, col:col + 45, :]
+                    Plate[row:row + 83, col:col + 45, :] = self.add(patch, self.random_bright(numbers[rand_int]))
+
                     x8, y2 = x7 + 45, y2
                     x_center_norm, y_center_norm = (x7 + x8) / (2 * 355), (y1 + y2) / (2 * 155)
                     width_norm, height_norm = (45 / 355), (83 / 155)
+
                     cls_idx = names.index(self.number_list[rand_int])
                     f.write(f'{cls_idx} {x_center_norm} {y_center_norm} {width_norm} {height_norm}\n')
 
@@ -276,6 +279,7 @@ class ImageGenerator:
 
 
 if __name__ == '__main__':
+
     with open('./assets/names.txt', 'r') as file:
         names = [name.strip() for name in file.readlines()]
 
